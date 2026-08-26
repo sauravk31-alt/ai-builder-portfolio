@@ -1,4 +1,4 @@
-exam_name,category,status,exam_group,min_qualification,stream_equirement,scope,eligible_states,domicile_reservation_state,application_deadline,source_url,last_verified_date
+exam_name,category,status,exam_group,min_qualification,stream_requirement,scope,eligible_states,domicile_reservation_state,application_deadline,source_url,last_verified_date
 AP POLYCET (Andhra Pradesh Polytechnic),Education,Active,AP POLYCET (Andhra Pradesh Polytechnic),Class 10 Pass,Any,national,All India,Andhra Pradesh,09-04-2026,https://polycetap.ap.gov.in,28-07-2026
 Assam PAT (Polytechnic Admission Test),Education,Discontinued,Assam PAT (Polytechnic Admission Test),Class 10 Pass,Any,state,Assam,,,https://dte.assam.gov.in,28-07-2026
 Bihar ITI CAT,Education,Active,Bihar ITI CAT,Class 10 Pass,Any,state,Bihar,,27 April 2026,https://bceceboard.bihar.gov.in,28-07-2026
