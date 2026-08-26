@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Finder India</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .landing {
+            min-height: 55vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 40px;
+        }
+        h1 { text-align: center; margin-bottom: 5px; }
+        .subtitle { text-align: center; margin-top: 0; margin-bottom: 30px; color: #555; }
+        .filters { width: 300px; }
+        .filters div { margin-bottom: 10px; display: flex; align-items: center; }
+        .filters label { width: 100px; text-align: left; }
+        .filters select { flex: 1; padding: 4px; }
+        .filters button { margin-top: 10px; margin-left: 110px; padding: 6px 20px; cursor: pointer; }
+        .results-section { max-width: 900px; margin: 0 auto 60px auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f0f0f0; }
+        .no-results { text-align: center; color: #777; margin-top: 20px; }
+        .status-msg { text-align: center; color: #999; }
+    </style>
+</head>
+<body>
+
+    <div class="landing">
+        <h1>Find the Exam That Matters to You</h1>
+        <p class="subtitle">Enter the details below</p>
+
+        <div class="filters">
+            <div>
+                <label>Qualification</label>
+                <select id="qualification" onchange="updateStreamOptions()"><option value="">Select Qualification</option></select>
+            </div>
+            <div>
+                <label>Stream</label>
+                <select id="stream"><option value="">Any</option></select>
+            </div>
+            <div>
+                <label>State</label>
+                <select id="state"><option value="">Any</option></select>
+            </div>
+            <button onclick="runSearch()">Search</button>
+        </div>
+        <p class="status-msg" id="loadStatus">Loading exam data...</p>
+    </div>
+
+    <div class="results-section">
+        <table id="resultsTable" style="display:none;">
+            <tr>
+                <th>Exam Name</th>
+                <th>Category</th>
+                <th>Eligibility / State</th>
+                <th>Application Deadline</th>
+                <th>URL</th>
+            </tr>
+        </table>
+        <p class="no-results" id="noResultsMsg" style="display:none;">No active exams match these filters.</p>
+    </div>
+
+    <script>
+        let examData = [];
+
+        // Load and parse the real CSV
+        Papa.parse("exams_cleaned.csv", {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                examData = results.data;
+                document.getElementById("loadStatus").style.display = "none";
+                populateDropdowns();
+            },
+            error: function(err) {
+                document.getElementById("loadStatus").textContent =
+                    "Could not load exam data. If you're viewing this file directly (file://), " +
+                    "run a local server instead - see note below the code.";
+                console.error(err);
+            }
+        });
+
+        // Maps each qualification level to the set of streams that actually
+        // co-occur with it in the real data - derived, not hardcoded, so it
+        // stays correct automatically as the dataset grows.
+        let qualificationToStreams = {};
+        let allStreams = new Set();
+
+        function populateDropdowns() {
+            const qualifications = new Set();
+            const states = new Set();
+
+            examData.forEach(row => {
+                const qual = (row.min_qualification || "").trim();
+                const stream = (row.stream_requirement || "").trim();
+
+                if (qual) qualifications.add(qual);
+
+                if (stream && stream !== "Any") {
+                    allStreams.add(stream);
+                    if (!qualificationToStreams[qual]) {
+                        qualificationToStreams[qual] = new Set();
+                    }
+                    qualificationToStreams[qual].add(stream);
+                }
+
+                if (row.eligible_states) {
+                    row.eligible_states.split(",").forEach(s => {
+                        const state = s.trim();
+                        if (state && state !== "All India") states.add(state);
+                    });
+                }
+            });
+
+            fillSelect("qualification", qualifications, QUALIFICATION_ORDER);
+            fillSelect("stream", allStreams);
+            fillSelect("state", states);
+        }
+
+        // Qualifications don't sort meaningfully alphabetically (e.g. "Bachelor's"
+        // would come before "Class 10 Pass") - this defines the real progression.
+        const QUALIFICATION_ORDER = [
+            "Class 8 Pass",
+            "Class 10 Pass",
+            "Class 12 Pass",
+            "Class 12 Pass (appearing)",
+            "Bachelor's Degree",
+            "Master's Degree"
+        ];
+
+        function sortByCustomOrder(values, orderList) {
+            return [...values].sort((a, b) => {
+                const ai = orderList.indexOf(a);
+                const bi = orderList.indexOf(b);
+                if (ai === -1 && bi === -1) return a.localeCompare(b); // unknown values: alphabetical fallback
+                if (ai === -1) return 1;  // unknown values sort to the end
+                if (bi === -1) return -1;
+                return ai - bi;
+            });
+        }
+
+        function fillSelect(id, valuesSet, customOrder) {
+            const select = document.getElementById(id);
+            while (select.options.length > 1) select.remove(1);
+            const sorted = customOrder ? sortByCustomOrder(valuesSet, customOrder) : [...valuesSet].sort();
+            sorted.forEach(val => {
+                const opt = document.createElement("option");
+                opt.value = val;
+                opt.textContent = val;
+                select.appendChild(opt);
+            });
+        }
+
+        // Called whenever Qualification changes - narrows Stream to only
+        // options that are actually valid for that qualification level.
+        function updateStreamOptions() {
+            const selectedQual = document.getElementById("qualification").value;
+            const validStreams = selectedQual
+                ? (qualificationToStreams[selectedQual] || new Set())
+                : allStreams;
+            fillSelect("stream", validStreams);
+        }
+
+        // Core matching logic - mirrors Week 3/4 decisions exactly
+        function matchesFilters(row, qualification, stream, state) {
+            // Only ever show Active exams (Week 4, Day 3 decision)
+            if ((row.status || "Active").trim() !== "Active") return false;
+
+            if (qualification && row.min_qualification?.trim() !== qualification) return false;
+
+            if (stream) {
+                const streamReq = (row.stream_requirement || "").trim();
+                if (streamReq !== "Any" && streamReq !== stream) return false;
+            }
+
+            if (state) {
+                const eligible = (row.eligible_states || "").split(",").map(s => s.trim());
+                const isAllIndia = eligible.includes("All India");
+                const isDirectMatch = eligible.includes(state);
+                if (!isAllIndia && !isDirectMatch) return false;
+            }
+
+            return true;
+        }
+
+        // Builds the "Eligibility / State" display - shows both fields when relevant (Week 4 decision)
+        function formatEligibility(row) {
+            const eligible = row.eligible_states || "";
+            const domicile = (row.domicile_reservation_state || "").trim();
+            if (domicile && domicile !== eligible) {
+                return `${eligible} (${domicile} domicile reserved)`;
+            }
+            return eligible;
+        }
+
+        function runSearch() {
+            const qualification = document.getElementById("qualification").value;
+            const stream = document.getElementById("stream").value;
+            const state = document.getElementById("state").value;
+
+            const matches = examData.filter(row => matchesFilters(row, qualification, stream, state));
+
+            // When searching by state, show state-specific exams before national ones -
+            // a state-level result is usually more directly relevant to that search.
+            if (state) {
+                matches.sort((a, b) => {
+                    const aIsAllIndia = (a.eligible_states || "").includes("All India");
+                    const bIsAllIndia = (b.eligible_states || "").includes("All India");
+                    if (aIsAllIndia === bIsAllIndia) return 0;
+                    return aIsAllIndia ? 1 : -1; // state-specific (false) sorts before All India (true)
+                });
+            }
+
+            const table = document.getElementById("resultsTable");
+            const noResultsMsg = document.getElementById("noResultsMsg");
+
+            // Clear old rows (keep header row)
+            table.querySelectorAll("tr:not(:first-child)").forEach(tr => tr.remove());
+
+            if (matches.length === 0) {
+                table.style.display = "none";
+                noResultsMsg.style.display = "block";
+                return;
+            }
+
+            noResultsMsg.style.display = "none";
+            table.style.display = "table";
+
+            matches.forEach(row => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+                    <td>${row.exam_name || ""}</td>
+                    <td>${row.category || ""}</td>
+                    <td>${formatEligibility(row)}</td>
+                    <td>${row.application_deadline || "Not available - pending verification"}</td>
+                    <td><a href="${row.source_url || "#"}" target="_blank">Link</a></td>
+                `;
+                table.appendChild(tr);
+            });
+        }
+    </script>
+
+</body>
+</html>
