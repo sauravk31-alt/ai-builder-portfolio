@@ -1,20 +1,21 @@
 exam_name,category,status,exam_group,min_qualification,stream_requirement,scope,eligible_states,domicile_reservation_state,application_deadline,source_url,last_verified_date
-AP POLYCET (Andhra Pradesh Polytechnic),Education,Active,AP POLYCET (Andhra Pradesh Polytechnic),Class 10 Pass,Any,national,All India,Andhra Pradesh,09-04-2026,https://polycetap.ap.gov.in,28-07-2026
+AP POLYCET (Andhra Pradesh Polytechnic),Education,Active,AP POLYCET (Andhra Pradesh Polytechnic),Class 10 Pass,Any,national,All India,Andhra Pradesh,09-04-2026,https://polycetap.ap.gov.in,2026-09-03
 Assam PAT (Polytechnic Admission Test),Education,Discontinued,Assam PAT (Polytechnic Admission Test),Class 10 Pass,Any,state,Assam,,,https://dte.assam.gov.in,28-07-2026
-Bihar ITI CAT,Education,Active,Bihar ITI CAT,Class 10 Pass,Any,state,Bihar,,27 April 2026,https://bceceboard.bihar.gov.in,28-07-2026
-Delhi CET (Delhi Polytechnic Exam) - General Diploma,Education,Active,Delhi CET ,Class 10 Pass,Any,national,All India,Delhi,"June 10, 2026",https://dseuonline.in,28-07-2026
-Delhi CET (Delhi Polytechnic Exam) - Diploma in Pharmacy,Education,Active,Delhi CET ,12th Pass (appearing),PCM/B,national,All India,Delhi,"June 10, 2026",https://dseuonline.in,28-07-2026
-JEECUP (UP Polytechnic Entrance),Education,Active,,Class 10 Pass,Any,Uttar Pradesh,Uttar Pradesh,,,https://jeecup.admissions.nic.in,
-JEXPO (West Bengal Polytechnic),Education,Active,,Class 10 Pass,Any,West Bengal,West Bengal,,,https://webscte.co.in/JEXPO,
-MP PPT (MP Pre-Polytechnic Test),Education,Active,,Class 10 Pass,Any,Madhya Pradesh,Madhya Pradesh,,,https://esb.mp.gov.in,
-TS POLYCET (Telangana Polytechnic),Education,Active,,Class 10 Pass,Any,Telangana,Telangana,,,https://polycet.sbtet.telangana.gov.in,
-Uttarakhand JEEP (Polytechnic Entrance),Education,Active,,Class 10 Pass,Any,Uttarakhand,Uttarakhand,,,https://ubter.in,
-Chhattisgarh PPT (CG Polytechnic Test),Education,Active,,Class 10 Pass,Any,Chhattisgarh,Chhattisgarh,,,https://vyapam.cgstate.gov.in,
-Odisha DET (Diploma Entrance Test),Education,Active,,Class 10 Pass,Any,Odisha,Odisha,,,http://sctevtodisha.nic.in,
-RRB Group D (Railways Level-1 Posts),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,RRB regional sites (e.g. http://rrbald.gov.in),
-SSC MTS (Multi-Tasking Staff),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://ssc.nic.in,
-SSC GD Constable (CAPFs / Rifleman),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://ssc.nic.in,
-Indian Army Agniveer (Women Military Police),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://joinindianarmy.nic.in,
+Bihar ITI CAT,Education,Active,Bihar ITI CAT,Class 10 Pass,Any,state,Bihar,,10 May 2026,https://bceceboard.bihar.gov.in,2026-09-03
+Delhi CET (Delhi Polytechnic Exam) - General Diploma,Education,Active,Delhi CET ,Class 10 Pass,Any,national,All India,Delhi,"June 13, 2026",https://dseuonline.in,2026-09-03
+Delhi CET (Delhi Polytechnic Exam) - Diploma in Pharmacy,Education,Active,Delhi CET ,12th Pass (appearing),PCM/B,national,All India,Delhi,"June 13, 2026",https://dseuonline.in,2026-09-04
+JEECUP (UP Polytechnic Entrance),Education,Active,,Class 10 Pass,Any,Uttar Pradesh,Uttar Pradesh,,17/05/26,https://jeecup.admissions.nic.in,2026-09-04
+JEXPO (West Bengal Polytechnic),Education,Active,,Class 10 Pass,Any,West Bengal,West Bengal,,04.05.2026,https://webscte.co.in/JEXPO,2026-09-04
+MP PPT (MP Pre-Polytechnic Test),Education,Active,,Class 10 Pass,Any,Madhya Pradesh,Madhya Pradesh,,,https://esb.mp.gov.in,2026-09-04
+TS POLYCET (Telangana Polytechnic),Education,Active,,Class 10 Pass,Any,Telangana,Telangana,,2026-04-22,https://polycet.sbtet.telangana.gov.in,2026-09-04
+Uttarakhand JEEP (Polytechnic Entrance),Education,Active,,Class 10 Pass,Any,Uttarakhand,Uttarakhand,,"May 15, 2026",https://ubter.in,2026-09-04
+Chhattisgarh PPT (CG Polytechnic Test),Education,Active,,Class 10 Pass,Any,Chhattisgarh,Chhattisgarh,,,https://vyapam.cgstate.gov.in,2026-09-04
+Odisha DET (Diploma Entrance Test),Education,Active,,Class 10 Pass,Any,Odisha,Odisha,,01/06/26,http://sctevtodisha.nic.in,2026-09-04
+H.P. Administrative Service Combined Competitive Examination ,Recruitment,Active,,Bachelor’s Degree,Any,state,Himachal Pradesh,Himachal Pradesh,22/09/26,https://hppsc.hp.gov.in/,
+RRB Group D (Railways Level-1 Posts),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,RRB regional sites (e.g. http://rrbald.gov.in),2026-09-04
+SSC MTS (Multi-Tasking Staff),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://ssc.nic.in,2026-09-04
+SSC GD Constable (CAPFs / Rifleman),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://ssc.nic.in,2026-09-04
+Indian Army Agniveer (Women Military Police),Recruitment,Active,,Class 10 Pass,Any,national,All India,,10/04/26,https://joinindianarmy.nic.in,2026-09-04
 Indian Navy Agniveer (MR) (Matric Recruit),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://agniveernavy.cdac.in,2026-08-28
 Coast Guard Navik (Domestic Branch),Recruitment,Active,,Class 10 Pass,Any,national,All India,,,https://joinindiancoastguard.gov.in,2026-08-28
 AISSEE (Sainik School Entrance - Class 6/9),Education,Active,,Class 8 Pass,Any,national,All India,,,https://aissee.nta.nic.in,2026-08-28
@@ -62,41 +63,41 @@ N.D.A. & N.A. Examination (I),Recruitment,Active,,12th Pass (appearing),Any,nati
 N.D.A. & N.A. Examination (II),Recruitment,Active,,12th Pass (appearing),Any,national,All India,,01.06.2027 ,https://www.upsc.gov.in/examinations/exam-calendar,
 AFCAT (Air Force Common Adm Test),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,21/06/26,https://afcat.cdac.in,2026-09-02
 INET (Indian Navy Entrance Test),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://joinindiannavy.gov.in,
-SSC CGL (Combined Grad. Level Exam),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://ssc.nic.in,
-SSC CPO (SI in CAPF/Delhi Police),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://ssc.nic.in,
-SSC JE (Junior Engineer Exam),Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://ssc.nic.in,
+SSC CGL (Combined Grad. Level Exam),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,No Update for 2026,https://ssc.gov.in/for-candidates/cgl-exam/xsd91hjkshdk92xk,2026-09-03
+SSC CPO (SI in CAPF/Delhi Police),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,No Update for 2026,https://ssc.gov.in/for-candidates/cgl-exam/f2tt2k1tpp3qpb5,2026-09-03
+SSC JE (Junior Engineer Exam),Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,22.09.2026 ,https://ssc.nic.in,2026-09-03
 State PSC Civil Services (e.g. UPPSC/MPSC),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,"State PSC websites (e.g. uppsc.up.nic.in, mpsc.gov.in)",
 "State Govt. Exams (Group B/C) – e.g. State SSC/Police, Etc.",Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,State SSC/Police/School Board portals,
 GATE (Grad Aptitude Test in Engg) for M.Tech ,Education,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://gate.iitk.ac.in,
 GATE (Grad Aptitude Test in Engg) For Phd,Education,Active,,Master’s Degree,Engineering,national,All India,,,https://gate.iitk.ac.in,
 CAT (Common Admission Test) – MBA,Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://iimcat.ac.in,
 XAT (Xavier Aptitude Test) – MBA,Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://xatonline.in,
-CMAT (Common Mgmt Admission Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://cmat.nta.nic.in,
-MAT (Management Aptitude Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://mat.aima.in,
-NMAT by GMAC (MBA Entrance),Education,Active,,Bachelor’s Degree,Any,national,All India,,,nmat.org,
-SNAP (Symbiosis National Aptitude Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://snaptest.org,
-IBSAT (ICFAI Business School Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://ibsindia.org,
-ATMA (AIMS Test for Mgmt Admissions),Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://atmaaims.com,
-TISS-NET (TISS National Entrance Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,,https://admissions.tiss.edu,
-UGC NET (Lectureship & JRF),Education,Active,,Master’s Degree,Any,national,All India,,,https://ugcnet.nta.nic.in,
-CSIR NET (Science JRF/LS Exam),Education,Active,,Master’s Degree,Any,national,All India,,,https://csirnet.nta.nic.in,
-TCS National Qualifier Test (NQT),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://learning.tcsionhub.in/hub/national-qualifier-test/,
-Infosys Certification (InfyTQ),Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://infytq.onwingspan.com,
-Wipro Elite NLTH (Nat’l Talent Hunt),Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://careers.wipro.com,
-Cognizant GenC Hiring,Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://app.joinsuperset.com/join/ (Cognizant GenC),
+CMAT (Common Mgmt Admission Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,"November 24, 2025 ",https://cmat.nta.nic.in,2026-09-03
+MAT (Management Aptitude Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,"September 7, 2026 (for PBT) / September 14, 2026 (for CBT)",https://mat.aima.in,2026-09-03
+NMAT by GMAC (MBA Entrance),Education,Active,,Bachelor’s Degree,Any,national,All India,,"October 10, 2026",nmat.org,2026-09-03
+SNAP (Symbiosis National Aptitude Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,"November 25, 2026",https://snaptest.org,2026-09-03
+IBSAT (ICFAI Business School Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,Third week of December 2026 (Tentative),https://ibsindia.org,2026-09-03
+ATMA (AIMS Test for Mgmt Admissions),Education,Active,,Bachelor’s Degree,Any,national,All India,,03-08-2026 (for the August 2026 session),https://atmaaims.com,2026-09-03
+TISS-NET (TISS National Entrance Test),Education,Active,,Bachelor’s Degree,Any,national,All India,,"Multiple deadlines depending on program (e.g., June 11, 2026 / June 13, 2026 / August 24, 2026)",https://admissions.tiss.edu,2026-09-03
+UGC NET (Lectureship & JRF),Education,Active,,Master’s Degree,Any,national,All India,,"May 24, 2026",https://ugcnet.nta.nic.in,2026-09-03
+CSIR NET (Science JRF/LS Exam),Education,Active,,Master’s Degree,Any,national,All India,,19 June 2026,https://csirnet.nta.nic.in,2026-09-03
+TCS National Qualifier Test (NQT),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,7 October 2026,https://www.tcsion.com/hub/national-qualifier-test/,2026-09-03
+Infosys Certification (InfyTQ),Recruitment,Discontinued,,Bachelor’s Degree,Engineering,national,All India,,,https://infytq.onwingspan.com,2026-09-03
+Wipro Elite NLTH (Nat’l Talent Hunt),Recruitment,Discontinued,,Bachelor’s Degree,Engineering,national,All India,,,https://careers.wipro.com,2026-09-03
+Cognizant GenC Hiring,Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://careers.cognizant.com/india-en/pathways-to-cognizant/genc-program/,
 AMCAT (Aspiring Minds Test),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://myamcat.com,
-eLitmus pH Test,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://elitmus.com,
-CoCubes Assessment,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://cocubes.com,
 TCS CodeVita (Global Coding Contest),Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://codevita.cloudapp.net,
 HackWithInfy (Infosys Coding Contest),Recruitment,Active,,Bachelor’s Degree,Engineering,national,All India,,,https://infosys.com/hackwithinfy,
-Bank PO Exams (e.g. IBPS PO / SBI PO),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,"https://ibps.in
-https://sbi.co.in/web/careers",
-Bank Clerk Exams (e.g. IBPS Clerk / SBI Clerk),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,"https://ibps.in
-https://sbi.co.in/web/careers",
-IBPS Specialist Officer (SO),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://ibps.in,
-RBI Grade B Officer,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://opportunities.rbi.org.in,
-RBI Assistant,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://opportunities.rbi.org.in,
-LIC AAO (Assistant Admin Officer),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://licindia.in/Bottom-Links/Careers,
-LIC ADO (Apprentice Dev. Officer),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://licindia.in/Bottom-Links/Careers,
-Public Sector PSU Exams (non-GATE),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,PSU websites (e.g. coalindia.in),
+SBI PO ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://sbi.bank.in/web/careers/current-openings,
+IBPS PO ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://www.ibps.in/,
+IBPS RRB PO (Officer Scale I) ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,www.ibps.in,
+SBI Clerk (Junior Associate) ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://sbi.bank.in/web/careers/current-openings,
+IBPS Clerk ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,21.07.2026 (for CRP PO/MT-XVI) / 21.09.2026 (for CRP RRBs-XV),www.ibps.in,2026-09-03
+IBPS RRB Clerk (Office Assistant) ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,21.07.2026 (for CRP PO/MT-XVI) / 21.09.2026 (for CRP RRBs-XV),www.ibps.in,2026-09-03
+IBPS Specialist Officer (SO),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://ibps.in,2026-09-03
+RBI Grade B Officer,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://opportunities.rbi.org.in,2026-09-03
+RBI Assistant,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,20/05/26,https://opportunities.rbi.org.in,2026-09-03
+NABARD Grade A/B ,Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,03-02-2026,https://www.nabard.org/careers-notices1.aspx?cid=693&id=26&csrt=1907363722457654889,2026-09-03
+LIC AAO (Assistant Admin Officer),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,01/09/25,,2026-09-03
+LIC ADO (Apprentice Dev. Officer),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,,2026-09-03
 CA (Chartered Accountant Exams),Recruitment,Active,,Bachelor’s Degree,Any,national,All India,,,https://icai.org,
